@@ -21,8 +21,8 @@ function generadorRemeras () {
 }
 // generadorDeEnvio ()
 function generadorDeEnvio () {
-        domicilios.push(new Localidad("San fernando", 300))
-        domicilios.push(new Localidad("Tigre", 250))
-        domicilios.push(new Localidad("Pacheco", 200))
-        domicilios.push(new Localidad("Carupa", 250))
+    domicilios.push(new Localidad("San fernando", 300))
+    domicilios.push(new Localidad("Tigre", 250))
+    domicilios.push(new Localidad("Pacheco", 200))
+    domicilios.push(new Localidad("Carupa", 250))
 }
