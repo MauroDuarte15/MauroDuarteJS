@@ -1,26 +1,4 @@
 
-
-//REMERAS
-const remera1 = new Producto("REMERA CLASICA CON ESTAMPADO", 40, 800)
-const remera2 = new Producto("REMERONES", 60, 1200)
-const remera3 = new Producto("REMERA CON VOLADITO", 70, 900)
-const remera4 = new Producto("REMERA LISA LANILLA", 70, 800)
-//CAMPERAS
-const campera1 = new Producto("CAMPERA CON PIEL MAXI", 40, 4600)
-const campera2 = new Producto("CAMPERA CON PIEL", 60, 3800)
-const campera3 = new Producto("ESPECIAL CAMPERA MAXI CON PIEL", 70, 4800)
-const campera4 = new Producto("ESPECIAL CAMPERA CON PIEL", 70, 4000)
-//PANTALONES
-const pantalon1 = new Producto("PANTALON CON PIEL CLASICO", 40, 3000)
-const pantalon2 = new Producto("PALAZO MORLEY FRIZA", 60, 2800 )
-const pantalon3 = new Producto("BABUCHA MORLEY FRIZA", 70, 2800 )
-const pantalon4 = new Producto("BABUCHA BENGALINA ELASTIZADA C/CIERRE", 70, 3500)
-//DOMICILIOS PARA ENTREGAS
-const domicilio4 = new Localidad("San fernando", 300)
-const domicilio3 = new Localidad("Tigre", 250)
-const domicilio1 = new Localidad("Pacheco", 200)
-const domicilio2 = new Localidad("Carupa", 250)
-
 // alert("Bienvenido a DaMia, para operar debe crear un usuario")
 // let nuevoCliente = confirm("¿Desea crear un nuevo Usuario?")
 //     if (nuevoCliente){

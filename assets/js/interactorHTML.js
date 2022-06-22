@@ -1,14 +1,3 @@
-const productos = ['Maxi-Campera', 'Campera', 'Remera Clasica', 'Remera Estampada']
-const pantalones = []
-const camperas = []
-const remeras = []
-const domicilios = []
-const carrito = []
-generadorPantalones ()
-generadorCamperas ()
-generadorRemeras ()
-generadorDeEnvio ()
-
 tituloIndex = document.getElementById("titulo")
 tituloSloganIndex = document.getElementById("slogan")
 productosTitulo = document.getElementById("tituloProductos")
@@ -25,6 +14,9 @@ function cargarProductos() {
               li.className = "collection-item blue-text"
               li.innerText = producto.nombre
               li.id = producto.nombre + "Prod"
+              li.addEventListener("click", ()=> {
+                agregarAlCarrito(`${producto.nombre}`)
+              })
               listadoIndumentaria.append(li)
     }
     for (const producto of remeras) {
@@ -32,6 +24,9 @@ function cargarProductos() {
               li.className = "collection-item blue-text"
               li.innerText = producto.nombre
               li.id = producto.nombre + "Prod"
+              li.addEventListener("click", ()=> {
+                agregarAlCarrito(`${producto.nombre}`)
+              })
               listadoIndumentaria.append(li)
     }
     for (const producto of pantalones) {
@@ -39,6 +34,9 @@ function cargarProductos() {
               li.className = "collection-item blue-text"
               li.innerText = producto.nombre
               li.id = producto.nombre + "Prod"
+              li.addEventListener("click", ()=> {
+                agregarAlCarrito(`${producto.nombre}`)
+              })
               listadoIndumentaria.append(li)
     }
 }

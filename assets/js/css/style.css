@@ -42,3 +42,11 @@ p, li {
 .fondo-inputs {
     background-color: aquamarine !important;
 }
+
+.blue-text {
+    color: blue;
+}
+
+.orange-text {
+    color: lime;
+}

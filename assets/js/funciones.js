@@ -75,13 +75,11 @@ function valoresEnvio() {
         }
 
 function calcularEnvio(prenda, envio) {
-    // console.log ("Resultado:",parseFloat(prenda) + parseFloat(envio))
     costoEnvio = parseFloat(prenda) + parseFloat(envio)
     return costoEnvio
-    // alert (`El costo con envio es ${costoEnvio}`)
 }
+
 function elegirRemera () {
-    debugger
     let primerNro = prompt("Que remera desea elegir? VOLADITO, REMERONES, ESTAMPADO, LANILLA").toUpperCase()
        switch(primerNro){
            case "VOLADITO":
@@ -302,4 +300,80 @@ function agregarRemera() {
 function agregarCampera() {
     resultadoBusqueda = buscarCampera()
     carrito.push((resultadoBusqueda))
+}
+
+function generarCampera() {
+    let id = creoID()
+    let nombre = prompt("Ingresa el nombre del producto:")
+    let stock = parseInt(prompt("Ingresa el stock:"))
+    let precio = parseInt(prompt("Ingresa el precio:"))
+        camperas.push(new Producto(id, nombre, stock, precio))
+}
+
+function generarPantalon() {
+    let id = creoID()
+    let nombre = prompt("Ingresa el nombre del producto:")
+    let stock = parseInt(prompt("Ingresa el stock:"))
+    let precio = parseInt(prompt("Ingresa el precio:"))
+        pantalones.push(new Producto(id, nombre, stock, precio))
+}
+
+function generarRemeras() {
+    let id = creoID()
+    let nombre = prompt("Ingresa el nombre del producto:")
+    let stock = parseInt(prompt("Ingresa el stock:"))
+    let precio = parseInt(prompt("Ingresa el precio:"))
+        remeras.push(new Producto(id, nombre, stock, precio))
+}
+
+function proyectarIncrementoCamperas(porc) {
+    let proyeccion = camperas.map((producto)=> {
+            return {
+                id: producto.id,
+                nombre: producto.nombre,
+                importe: producto.importe,
+                proyeccion: (producto.importe * porc).toFixed(2)
+            }
+    })
+    console.table(proyeccion)
+}
+
+function proyectarIncrementoRemeras(porc) {
+    let proyeccion = remeras.map((producto)=> {
+            return {
+                id: producto.id,
+                nombre: producto.nombre,
+                importe: producto.importe,
+                proyeccion: (producto.importe * porc).toFixed(2)
+            }
+    })
+    console.table(proyeccion)
+}
+function proyectarIncrementPantaloness(porc) {
+    let proyeccion = pantalones.map((producto)=> {
+            return {
+                id: producto.id,
+                nombre: producto.nombre,
+                importe: producto.importe,
+                proyeccion: (producto.importe * porc).toFixed(2)
+            }
+    })
+    console.table(proyeccion)
+}
+function agregarAlCarrito(prod) {
+    if (prod.trim() !== "") {
+        carrito.push(prod)
+        const liNuevoProducto = document.createElement("li")
+              liNuevoProducto.className = "collection-item orange-text"
+              liNuevoProducto.innerText = prod
+              liNuevoProducto.id = prod + "EnCarrito"
+              liNuevoProducto.addEventListener("dblclick", ()=> { removerDelCarrito(`${liNuevoProducto.id}`) }) 
+              listadoCarrito.append(liNuevoProducto)
+    }
+}
+
+function removerDelCarrito(prod) {
+    const productoAremover = document.getElementById(`${prod}`)
+          productoAremover.remove()
+          console.warn(`${prod} ha sido eliminado del carrito.`)
 }
